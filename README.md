@@ -11,7 +11,7 @@ A custom annotation export for Duke University's Unreal 3D importer.
 
 ## Configuring for Supabase Backend Access
 
-This plugin accesses the Supabase backend. Therefore, you need to configure the test app for backend access.
+This plugin accesses the database backend. Therefore, you need to configure the test app for Supabase access.
 
 1. Create a copy of the file `.dev/.env.example` named `.dev/.env`.
 2. Edit the `.dev/.env` file to configure your Supabase project URL and public API key.
