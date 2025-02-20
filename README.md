@@ -9,7 +9,7 @@ A custom annotation export for Duke University's Unreal 3D importer.
 - Run `npm run dev` to start the test application.
 - Go to <http://localhost:4321/>
 
-## Configuring for Backend Supabase Access
+## Configuring for Supabase Backend Access
 
 This plugin accesses the Supabase backend. Therefore, you need to configure the test app for backend access.
 
