@@ -1,6 +1,6 @@
 {
   "name": "@recogito/plugin-duke-unreal-export",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A custom annotation export for Duke University's Unreal 3D import",
   "type": "module",
   "main": "dist/index.js",
