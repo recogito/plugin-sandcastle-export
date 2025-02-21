@@ -1,8 +1,16 @@
 [
   {
-    "name": "download-formats-document-menu-items",
-    "component_name": "DocumentMenuExtension",
-    "module_name": "@recogito/plugin-duke-unreal-export",
-    "extension_point": "*"
+    "name": "Duke Unreal Export",
+    "description": "A custom annotation export for Duke University's Unreal 3D importer",
+    "author": "Performant Software",
+    "homepage": "https://www.performantsoftware.com/",
+    "extensions": [
+      {
+        "name": "download-formats-document-menu-items",
+        "component_name": "DocumentMenuExtension",
+        "module_name": "@recogito/plugin-duke-unreal-export",
+        "extension_point": "*"
+      }
+    ]
   }
 ]
