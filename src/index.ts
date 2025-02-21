@@ -19,7 +19,7 @@ const DukeUnrealPlugin: Plugin = {
 
     module_name: '@recogito/plugin-duke-unreal-export',
 
-    extension_point: '*'
+    extension_point: 'project:document-actions'
 
   }]
 
