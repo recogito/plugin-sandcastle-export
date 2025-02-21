@@ -6,7 +6,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "dev": "npm start --prefix .dev/",
@@ -28,10 +29,7 @@
     "react-dom": "^19.0.0",
     "typescript": "^5.7.3"
   },
-  "peerDependencies": {
-    "astro": "^5.0.0"
-  },
   "dependencies": {
-    "@recogito/studio-sdk": "^0.2.0"
+    "@recogito/studio-sdk": "^0.2.3"
   }
 }
