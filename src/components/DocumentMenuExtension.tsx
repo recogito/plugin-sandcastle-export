@@ -1,10 +1,6 @@
-interface DocumentMenuExtensionProps {
+import { DocumentCardActionsExtensionProps } from '@recogito/studio-sdk';
 
-  projectId: string;
-
-}
-
-export const DocumentMenuExtension = (props: DocumentMenuExtensionProps) => {
+export const DocumentMenuExtension = (props: DocumentCardActionsExtensionProps) => {
 
   return (
     <a href={`/api/${props.projectId}/export/unreal`}>Export for Unreal 3D</a>
