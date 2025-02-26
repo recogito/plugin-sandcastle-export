@@ -1,6 +1,6 @@
 {
   "name": "@recogito/plugin-duke-unreal-export",
-  "version": "0.2.0",
+  "version": "0.5.0-beta.10",
   "description": "A custom annotation export for Duke University's Unreal 3D import",
   "type": "module",
   "main": "dist/index.js",
@@ -13,8 +13,9 @@
     "prepare": "npm run build",
     "dev": "npm start --prefix .dev/",
     "build": "tsc && npm run copy-css",
-    "copy-css": "copyfiles -u 1 \"src/extensions/**/*.css\" dist",
-    "publish": "npm publish --access public "
+    "copy-css": "copyfiles -u 1 \"src/**/*.css\" dist",
+    "publish": "npm publish --access public ",
+    "publish-beta": "npm publish --access public --tag beta"
   },
   "exports": {
     ".": "./dist/index.js",
@@ -31,6 +32,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
     "@recogito/studio-sdk": "^0.2.4"
   }
 }

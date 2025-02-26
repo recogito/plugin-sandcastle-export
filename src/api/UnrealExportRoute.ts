@@ -4,6 +4,7 @@ import { serializeQuill } from "../lib/transform";
 
 export const GET: APIRoute = async ({ request, params, cookies }) => {
   const projectId = params.projectId;
+  const documentId = params.documentId;
 
   const sdk = await createServerSDK(request, cookies, import.meta.env);
 
@@ -20,7 +21,7 @@ export const GET: APIRoute = async ({ request, params, cookies }) => {
     return new Response(JSON.stringify({ message: "Not authorized" }));
 
   const { error: layersError, data: layers } =
-    await sdk.layers.getLayersInProject(projectId!);
+    await sdk.layers.getDocumentLayersInProject(documentId!, projectId!);
 
   if (layersError || !layers)
     return new Response(JSON.stringify({ message: layersError?.message }));
@@ -34,9 +35,15 @@ export const GET: APIRoute = async ({ request, params, cookies }) => {
       JSON.stringify({ message: anntotationsError?.message })
     );
 
-  serializeQuill(annotations);
+  const output = serializeQuill(annotations);
 
-  console.log(JSON.stringify(annotations));
+  const filename = `${projectId}-${documentId}.json`;
 
-  return new Response(JSON.stringify({ message: "success!" }));
+  return new Response(JSON.stringify(output), {
+    headers: {
+      "Content-Type": "text/json",
+      "Content-Disposition": `attachment;filename=${filename}`,
+    },
+    status: 200,
+  });
 };
