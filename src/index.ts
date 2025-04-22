@@ -13,6 +13,8 @@ const DukeUnrealPlugin: Plugin = {
 
   module_name: "@recogito/plugin-duke-unreal-export",
 
+  thumbnail: 'thumbnail.jpg',
+
   extensions: [
     {
       name: "download-formats-document-menu-items",
