@@ -11,13 +11,13 @@ const DukeUnrealPlugin: Plugin = {
 
   homepage: "https://www.performantsoftware.com/",
 
+  module_name: "@recogito/plugin-duke-unreal-export",
+
   extensions: [
     {
       name: "download-formats-document-menu-items",
 
       component_name: "DocumentMenuExtension",
-
-      module_name: "@recogito/plugin-duke-unreal-export",
 
       extension_point: "project:document-actions",
     },
