@@ -1,6 +1,45 @@
-# plugin-duke-unreal-export
+# Duke University 3D Export Plugin
 
-A custom annotation export for Duke University's Unreal 3D importer.
+A custom Recogito Studio export for Duke University's Unreal 3D importer.
+
+## Installation
+
+1. **Change into your Recogito Client folder.** To install the plugin package, run:
+
+```
+npm install @recogito/plugin-duke-unreal-export
+```
+
+2. **Edit your `astro.config.mjs`:**
+
+```diff
+import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+import netlify from '@astrojs/netlify';
+
++ import DukeUnrealExportPlugin from '@recogito/plugin-duke-unreal-export';
+
+export default defineConfig({
+  integrations: [
+    react(),
++   DukeUnrealExportPlugin()
+  ],
+  output: 'server',
+  adapter: netlify(),
+  vite: {
+    ssr: {
+      noExternal: ['clsx', '@phosphor-icons/*', '@radix-ui/*']
+    },
+    optimizeDeps: {
+      esbuildOptions: {
+        target: 'esnext'
+      }
+    }
+  }
+});
+```
+
+3. **Restart the Recogito Client.**
 
 ## Development
 
