@@ -8,7 +8,7 @@ export const DocumentMenuExtension = (
   return (
     <a
       className="dme-menu-item"
-      href={`/api/${props.projectId}/${props.documentId}/export/unreal`}
+      href={`/api/${props.projectId}/${props.document.id}/export/unreal`}
     >
       <CubeTransparent size={16} color="#6f747c" />
       Export for Unreal 3D
