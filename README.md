@@ -1,4 +1,4 @@
-# SandCastle3D Annotation Export Plugin
+# Sandcastle3D Annotation Export Plugin
 
 A custom Recogito Studio annotation export for the [Sandcastle](https://www.sandcastle3d.org/) project.
 
