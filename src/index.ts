@@ -1,17 +1,17 @@
 import type { AstroIntegration } from "astro";
 import { Plugin, registerPlugin } from "@recogito/studio-sdk";
 
-const DukeUnrealPlugin: Plugin = {
-  name: "Duke Unreal Export",
+const SandcastlePlugin: Plugin = {
+  name: "Sandcastle3D Export",
 
   description:
-    "A custom annotation export for Duke University's Unreal 3D importer",
+    "A custom annotation export for the Sandcastle3D project",
 
   author: "Performant Software",
 
   homepage: "https://www.performantsoftware.com/",
 
-  module_name: "@recogito/plugin-duke-unreal-export",
+  module_name: "@recogito/plugin-sandcastle-export",
 
   thumbnail: 'thumbnail.jpg',
 
@@ -27,19 +27,19 @@ const DukeUnrealPlugin: Plugin = {
 };
 
 const plugin = (): AstroIntegration => ({
-  name: "unreal-export-plugin",
+  name: "sandcastle-export-plugin",
   hooks: {
     "astro:config:setup": ({ config, logger, injectRoute }) => {
       // UI: register additional download menu items
-      registerPlugin(DukeUnrealPlugin, config, logger);
+      registerPlugin(SandcastlePlugin, config, logger);
 
       // Inject download route
-      logger.info("Injecting new API route: /api/[projectId]/export/unreal");
+      logger.info("Injecting new API route: /api/[projectId]/export/sandcastle");
 
       injectRoute({
-        pattern: "/api/[projectId]/[documentId]/export/unreal",
+        pattern: "/api/[projectId]/[documentId]/export/sandcastle",
         entrypoint:
-          "node_modules/@recogito/plugin-duke-unreal-export/src/api/UnrealExportRoute.ts",
+          "node_modules/@recogito/plugin-sandcastle-export/src/api/SandcastleExportRoute.ts",
         prerender: false,
       });
     },
