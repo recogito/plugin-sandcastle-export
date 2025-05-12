@@ -12,5 +12,20 @@
         "extension_point": "project:document-actions"
       }
     ]
+  },
+  {
+    "name": "Sandcastle3D Export",
+    "description": "A custom annotation export for the Sandcastle3D project",
+    "author": "Performant Software",
+    "homepage": "https://www.performantsoftware.com/",
+    "module_name": "@recogito/plugin-sandcastle-export",
+    "thumbnail": "thumbnail.jpg",
+    "extensions": [
+      {
+        "name": "download-formats-document-menu-items",
+        "component_name": "DocumentMenuExtension",
+        "extension_point": "project:document-actions"
+      }
+    ]
   }
 ]

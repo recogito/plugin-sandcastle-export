@@ -1,12 +1,12 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import node from '@astrojs/node';
-import UnrealExportPlugin from '@recogito/plugin-duke-unreal-export';
+import SandcastleExportPlugin from '@recogito/plugin-sandcastle-export';
 
 export default defineConfig({
   integrations: [
     react(),
-    UnrealExportPlugin(),
+    SandcastleExportPlugin(),
   ],
   devToolbar: {
     enabled: false

@@ -8,7 +8,7 @@ export const DocumentMenuExtension = (
   return (
     <a
       className="dme-menu-item"
-      href={`/api/${props.projectId}/${props.document.id}/export/sandcastle`}
+      href={`/api/${props.projectId}/${props.document?.id}/export/sandcastle`}
     >
       <CubeTransparent size={16} color="#6f747c" />
       Export for Sandcastle 3D
