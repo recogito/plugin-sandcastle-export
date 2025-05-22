@@ -1,6 +1,6 @@
 {
   "name": "@recogito/plugin-sandcastle-export",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A custom annotation export for the Sandcastle3D project",
   "type": "module",
   "main": "dist/index.js",
