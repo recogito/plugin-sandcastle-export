@@ -19,7 +19,7 @@ const SandcastlePlugin: Plugin = {
     {
       name: "download-formats-document-menu-items",
 
-      component_name: "DocumentMenuExtension",
+      component_name: "SandcastleExportMenuItem",
 
       extension_point: "project:document-actions",
     },

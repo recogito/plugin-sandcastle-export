@@ -18,7 +18,7 @@
   "exports": {
     ".": "./dist/index.js",
     "./thumbnail.jpg": "./dist/assets/teapot_3d.jpg",
-    "./DocumentMenuExtension": "./dist/components/DocumentMenuExtension.js",
+    "./SandcastleExportMenuItem": "./dist/components/SandcastleExportMenuItem.js",
     "./SandcastleExportRoute.ts": "./dist/api/SandcastleExportRoute.js"
   },
   "devDependencies": {
@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
+    "@radix-ui/react-dropdown-menu": "^2.1.15",
     "@recogito/studio-sdk": "^0.6.1"
   }
 }
